@@ -1,0 +1,270 @@
+* {
+  box-sizing: border-box;
+}
+
+.nav-links-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-content: space-evenly;
+  align-items: center;
+  list-style: none;
+  margin: 0px auto;
+  padding: 15px;
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 50%;
+  background-color: #ffffff; 
+  margin: 5px 200px;
+  width: calc(100% - 400px);
+  z-index: 1000;
+  padding: 0px 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* optional: adds subtle shadow */
+  border-radius: 10px;
+  transition: top 0.3s; 
+}
+
+.section-link {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  font-family:Arial, Helvetica, sans-serif;
+  color: #d98b60;
+}
+.section-link:hover {
+  font-size: 13px;
+  transition:ease-in-out 0.2s;
+}
+
+.page-name {
+  /* font-family: "Arial"; */
+  font-size: 40px;
+  color:#ba602f;
+}
+
+.home-body {
+  padding-top: 0;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;      /* horizontal centering */
+  align-items: center;          /* vertical centering */
+  background-color: #f8f8f8;  /* optional background */
+}
+
+body {
+  padding-top: 60px;
+  text-align: center;
+  font-family: "Poppins";
+  color: rgb(0, 0, 0);
+  background-color: rgb(248, 221, 228);
+}
+body::before {
+  content: "";
+  background-image: url('imgs/background.png');
+  background-size:auto;
+  background-repeat: repeat;
+  background-position: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.15;
+  z-index: -1;
+}
+
+.recipe-body {
+  display: grid;
+  margin: 0 auto;
+  text-align: center;
+  grid-template-columns: 1fr 4fr 1fr;
+  grid-template-areas: 
+  ". recipe-content ."
+  ". recipe-content ."
+  ". recipe-content .";
+}
+
+.recipe-page-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin: 0 auto;
+  margin-left: 100px;
+  margin-right: 100px;
+  row-gap: 20px;
+  column-gap: 20px;
+}
+
+.recipe {
+    background-color: #fff4e7;
+    /* padding: 20px; */
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: 0.2s ease;
+}
+.recipe:hover {
+    /* margin: 5px; */
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.recipe-page-section {
+    background-color: #fff4e7;
+    padding: 20px;
+    margin: 15px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    grid-area: recipe-content;
+}
+
+.recipe-name {
+  text-align: center;
+  font-family: "Poppins";
+  color:burlywood;
+  font-size: 15px;
+}
+
+.recipe-img {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.recipe-image-link {
+  display:contents;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 15px;
+  text-decoration: none;
+}
+
+.recipe-page-image-wrapper {
+  aspect-ratio: 1/1; 
+  width: 100%;
+  overflow: hidden;
+  border-radius: 15px;
+  background-color: #f8f8f8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cute-button {
+  border-radius: 20px;
+  color:antiquewhite;
+  background-color: #ba602f;
+  font-family: "Poppins";
+  font-size: 15px;
+  padding: 5px 15px;
+  cursor: pointer;
+  border: none;
+}
+.cute-button:hover {
+  background-color: #ba602fd8;
+}
+.add-recipe-button {
+  position: absolute;
+  right: 110px;
+  top: 110px;
+}
+
+.image-row {
+  display: flex;
+  gap: 30px;
+  padding: 50px;
+}
+
+.image-link {
+  flex: 1;
+  aspect-ratio: 3 / 4; 
+  overflow: hidden;
+  border-radius: 15px;
+  display: block;
+}
+
+.image-link img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+  transition: transform 0.3s ease;
+}
+.image-link img:hover {
+  transform: scale(1.05);
+}
+
+.recipe-ingredients {
+  list-style: none;
+}
+
+.pantry-page {
+  display: grid;
+  row-gap: 30px;
+  column-gap: 30px;
+  width: 100%;
+  padding: 30px;
+  grid-template-areas:
+    "top1        top1"
+    "grid-area1  grid-area2"
+}
+
+.pantry-item {
+  border-bottom: 2px solid #ffffff;
+  display: grid;
+  padding: 10px 0;
+  grid-template-columns: 1fr 9fr 1fr;
+  row-gap: 8px;
+}
+
+.item-quantity {
+  font-size : 10pt;
+  color:rgb(98, 91, 91);
+}
+
+.grid-area1 {
+  grid-area: grid-area1;
+}
+.grid-area2 {
+  grid-area: grid-area2;
+}
+.top1 {
+  grid-area: top1;
+}
+
+.box-title{
+    color: #eebfa6;
+    font-size: 20px;
+    text-align:left;
+    margin-left: 30pt;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.user-input {
+    background-color: rgba(0, 0, 0, 0);
+    border: 2px #cf9760 solid;
+    padding: 8px;
+    border-radius: 100px;
+    width: 100%;
+    text-indent: 18px;
+    font-size: 18px;}
+    
+.user-input-label {
+    color: #9f774e;
+    background-color:   rgb(248, 221, 228);
+    font-size: 11px;
+    position: absolute;
+    left: 25px;
+    top: -7px;
+    padding: 0 2px;}
